@@ -1,0 +1,36 @@
+# Test First Docker: <mark>hello-docker-hush</mark>
+<mark>test with vs code, wsl2, docker desktop, Ubuntu24.04.1</mark>
+## Create a new folder: HELLODOCKER
+## create index.js:  
+`console.log('Hello, World! Test test Hush');`
+## create Dockerfile:
+```
+FROM node:14-alpine
+COPY index.js /index.js
+CMD ["node", "index.js"]
+```
+![](https://s3.bmp.ovh/imgs/2025/06/21/1d9d458846127647.png)
+# build image:
+`docker build -t hello-docker-hush .`  
+![](https://s3.bmp.ovh/imgs/2025/06/21/edee01b6ce791c2a.png)   
+meet 
+# check image:
+`docker images` or `docker image ls`    
+if not set tag when we build it, then will use the default tag: latest  
+![](https://s3.bmp.ovh/imgs/2025/06/21/7275469e9f31c9f8.png)  
+
+# run:
+`docker run hello-docker-hush`    
+![](https://s3.bmp.ovh/imgs/2025/06/21/255d85096b3ee472.png)  
+
+# push to Docker Hub
+<mark>TODO, no access at this moment</mark>
+
+# free online tool: Play with Docker
+```
+docker pull geekhour/hello-docker
+docker images
+docker run geekhour
+```
+![](https://s3.bmp.ovh/imgs/2025/06/21/1e16fe28000a9ffe.png)  
+![](https://s3.bmp.ovh/imgs/2025/06/21/071e367a323789b5.png)  
